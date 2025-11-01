@@ -17,6 +17,7 @@ export const metadata: Metadata = {
 const chewy = Chewy({
   weight: ["400"],
   style: "normal",
+  display: 'optional',
 })
 
 export default function RootLayout({

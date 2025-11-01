@@ -16,6 +16,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ isValid });
   } catch (error) {
+    console.error("Error validating visual editing token:", error);
     return NextResponse.json(
       { isValid: false, error: "Invalid request" },
       { status: 400 },

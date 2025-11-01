@@ -17,4 +17,6 @@ const DefaultLoader = React.forwardRef<
     React.HTMLAttributes<HTMLDivElement>
 >(() => <span className={classes.loader}></span>);
 
+DefaultLoader.displayName = "DefaultLoader";
+
 export default DefaultLoader;

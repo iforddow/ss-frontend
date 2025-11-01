@@ -25,5 +25,5 @@ export default function useSanitizeContent(content: string) {
     setLoading(false);
   }, [content]);
 
-  return { sanitizedContent, sanitizedLoading: loading };
+  return { sanitizedContent, sanitizedLoading: loading, setLoading };
 }
