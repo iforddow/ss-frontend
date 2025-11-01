@@ -21,7 +21,7 @@ export const VisualEditingContext = createContext<VisualEditingContextType | und
 export function VisualEditingProvider({ children }: { children: React.ReactNode }) {
     const [isVisualEditing, setIsVisualEditing] = useState(false);
     const pathname = usePathname();
-    const searchParams = useSearchParams();
+    const searchParams = typeof window !== "undefined" ? useSearchParams() : null;
     const tokenRef = useRef<string | null>(null);
     const isInitialized = useRef(false);
     const hasReloadedForThisPage = useRef<string | null>(null);
@@ -51,8 +51,8 @@ export function VisualEditingProvider({ children }: { children: React.ReactNode 
 
     // Initialize visual editing and handle reloads
     useEffect(() => {
-        const visualEditingParam = searchParams.get("visual-editing") === "true";
-        const tokenParam = searchParams.get("token");
+        const visualEditingParam = searchParams?.get("visual-editing") === "true";
+        const tokenParam = searchParams?.get("token");
 
         // If visual editing is detected and we have a valid token
         if (visualEditingParam && tokenParam) {
