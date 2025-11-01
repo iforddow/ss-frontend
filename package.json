@@ -6,20 +6,37 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "generate:types": "node direct-next/package/scripts/generate-types.js"
   },
   "dependencies": {
+    "@apollo/client": "^4.0.5",
+    "@directus/sdk": "^20.1.0",
+    "@directus/types": "^13.2.1",
+    "@directus/visual-editing": "^1.1.0",
+    "@mantine/core": "^8.3.1",
+    "@mantine/hooks": "^8.3.1",
+    "@tabler/icons-react": "^3.34.1",
+    "directus-typescript-gen": "^1.0.0",
+    "dompurify": "^3.2.6",
+    "dotenv": "^17.2.2",
+    "fs-extra": "^11.3.1",
+    "graphql": "^16.11.0",
+    "next": "15.5.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.5.3"
+    "swagger-client": "^3.35.6"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.5.3",
-    "@eslint/eslintrc": "^3"
+    "postcss": "^8.5.6",
+    "postcss-preset-mantine": "^1.18.0",
+    "postcss-simple-vars": "^7.0.1",
+    "typescript": "^5"
   }
 }
